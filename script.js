@@ -1,3 +1,4 @@
+AOS.init();
 const menu = document.querySelectorAll(".card");
 const container = document.querySelector(".container");
 const disc = document.getElementById("promo");
@@ -62,18 +63,4 @@ window.addEventListener("scroll", function(){
   home.forEach(function(h){
     h.style.transform = "translate(0, "+ wScroll/4 +"%)";
   });
-  if(wScroll < container.offsetTop - 300){
-    container.classList.add("food");
-  }
-  setTimeout(function(){
-    container.classList.remove("food");
-  }, 1500);
-  if(wScroll < disc.offsetTop - 100){
-    promo.forEach(function(p){
-      p.classList.add('zag');
-      setTimeout(function(){
-        p.classList.remove('zag');
-      }, 1700);
-    });
-  }
 });
